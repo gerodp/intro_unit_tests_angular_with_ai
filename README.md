@@ -1,4 +1,3 @@
-
 # intro_unit_tests_angular_with_ai
 
 Proyecto de ejemplo para introducir a desarrolladores en las pruebas unitarias en Angular.
@@ -23,34 +22,34 @@ Este repositorio contiene un proyecto Angular mínimo con ejemplos básicos de c
 
 1. Clona el repositorio (si no lo has hecho):
 
-	 ```bash
-	 git clone <repo-url>
-	 cd intro_unit_tests_angular_with_ai
-	 ```
+         ```bash
+         git clone <repo-url>
+         cd intro_unit_tests_angular_with_ai
+         ```
 
 2. Instala las dependencias:
 
-	 ```bash
-	 npm install
-	 # o con yarn
-	 # yarn install
-	 ```
+         ```bash
+         npm install
+         # o con yarn
+         # yarn install
+         ```
 
 ## Ejecutar las pruebas
 
 - Modo desarrollo (observando cambios):
 
-	```bash
-	npm run test
-	# o con Angular CLI
-	# ng test
-	```
+        ```bash
+        npm run test
+        # o con Angular CLI
+        # ng test
+        ```
 
 - Ejecutar pruebas una sola vez (útil para CI):
 
-	```bash
-	npm run test -- --watch=false --browsers=ChromeHeadless
-	```
+        ```bash
+        npm run test -- --watch=false --browsers=ChromeHeadless
+        ```
 
 Nota: Asegúrate de que el entorno de CI tenga un navegador headless disponible (por ejemplo, ChromeHeadless) o que esté configurado `karma-chrome-launcher` para CI.
 
@@ -58,6 +57,19 @@ Nota: Asegúrate de que el entorno de CI tenga un navegador headless disponible 
 
 - `src/app/` — código de la aplicación y ejemplos de componentes
 - `src/**/*.spec.ts` — archivos de pruebas unitarias para componentes, servicios y pipes
+
+## Ejemplos incluidos
+
+Los siguientes casos de prueba sirven como material para mostrar conceptos clave en presentaciones o workshops:
+
+| Archivo | Qué ilustra |
+| --- | --- |
+| `src/app/counter/counter.component.ts` | Componente standalone con métodos simples y template inline. |
+| `src/app/counter/counter.component.spec.ts` | Uso de `TestBed`, `ComponentFixture` y consultas del DOM con `By.css`. |
+| `src/app/services/message.service.ts` | Servicio inyectable con estado interno. |
+| `src/app/services/message.service.spec.ts` | Cómo inyectar servicios con `TestBed` y verificar efectos secundarios. |
+| `src/app/pipes/highlight.pipe.ts` | Pipe standalone que transforma cadenas. |
+| `src/app/pipes/highlight.pipe.spec.ts` | Pruebas unitarias puras sobre un pipe sin TestBed. |
 
 ## Buenas prácticas incluidas
 
